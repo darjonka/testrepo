@@ -25,6 +25,6 @@ jobs:
         with:
           node-version: 18
       - name: Print github context
-        run: echo " {{ toJSON(github) }} "
+        run: echo " ${{ toJSON(github) }} "
       - name: Deploy on server
         run: echo "Deploying on server..."

@@ -1,9 +1,8 @@
 name: Third workflow
 on: issues
-
 jobs:
   list_issues:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print out event details
-        run: echo ${{ toJSON(github.event) }}
+        run: echo "${{ toJSON(github.event) }}"

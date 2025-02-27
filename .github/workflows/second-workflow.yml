@@ -1,0 +1,16 @@
+name: Second workflow
+on: push
+jobs:
+  test:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: NPM install
+        run: npm ci
+      - name: Run NPM tests
+        run: npm test
